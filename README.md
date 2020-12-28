@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  Simulador de um AFD e geração de AF mínimo 🚀
+  ↔️ Simulador de um AFD e geração de AF mínimo ↕️ 
 </h2>
 
 <!-- Tópicos -->
@@ -17,7 +17,7 @@
 
 - O simulador deve seguir o formatos de entrada e saída.
 
-## Partes do projeto
+## 📚 Partes do projeto
 
 - ### Parte 1 
 
