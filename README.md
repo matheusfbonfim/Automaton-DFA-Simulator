@@ -1,4 +1,6 @@
-<img alt="automato" src=".github/automato.svg" width="50%"/>
+<h1 align="center">
+  <img alt="automato" src=".github/automato.svg" width="25%"/>
+</h1>
 
 <h2 align="center">
   Simulador de um AFD e geração de AF mínimo 🚀
