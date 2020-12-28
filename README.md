@@ -9,7 +9,7 @@
 <!-- Tópicos -->
 
 ## 💻 Sobre o projeto
-- Projeto desenvolvido na matéria de Teoria da Computação durante o curso de Engenharia da Computação - **[@UTFPR](http://www.utfpr.edu.br/)**.
+- Projeto desenvolvido na matéria de Teoria da Computação, durante o curso de Engenharia da Computação - **[@UTFPR](http://www.utfpr.edu.br/)**.
 
 - Consiste na implementação de um simulador de Autômato Finito Determinístico (AFD) que aceite a especificação de um AFD, teste se o AFD pode ser minimizado e, se puder, realize o processo de minimização, apresentando-o.
 
