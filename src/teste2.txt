@@ -1,0 +1,19 @@
+2
+2 a b
+1 1
+4
+0 a 0
+0 b 1
+1 b 1
+1 a 0
+10
+aaaaaaab
+aaaaa
+bbbb
+b
+aaabaaaa
+aaaaab
+aaa
+aaab
+aabaa
+aabab

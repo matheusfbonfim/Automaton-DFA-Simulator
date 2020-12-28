@@ -9,6 +9,7 @@ FUNÇÃO OPEN_FILE
         - Faz um lista com os elementos sendo cada linha do texto presente no arquivo
 """
 
+
 def open_file(file_name):
     # O bloco with - Forma flexível de manipular arquivos (abertura e fechamento automático)
     with open(file_name) as file:

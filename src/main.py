@@ -1,9 +1,17 @@
 # IMPORTS
 from state import state  # Importando a class state - objeto estado
 from open_file import open_file  # Importando função para abertura e leitura de arquivo
+from word_input import word_input  # Importando função para inserir as palavras de entrada a serem testadas
+from check_word import check_palavra # Importando função que valida a palavra de entrada no AFD
 
 # FUNÇÃO PRINCIPAL
 def main():
+    """
+    #####################################################
+    ############### PARTE 01 ############################
+    #####################################################
+    """
+
     # Entrada com o nome do arquivo
     file_name = input("Digite o nome do arquivo de entrada (sem a extensão .txt): ")
     file_name = f"{file_name}.txt"
@@ -133,23 +141,80 @@ def main():
 
             # Automato - dict de estados
             # Get (dict) identifica por meio da key, o estado atual correspondente do loop
-            # Adiciona a cada estado suas transicoes -> add_transicao
-            automato.get(state_atual).add_transicao(aresta, state_final)
+            # Adiciona a cada estado suas transicoes -> insere_transicao
+            automato.get(state_atual).insere_transicao(aresta, state_final)
     else:
         print("Número de transições inválido ou excedido")
         return 0
 
+    # ADICIONANDO O INDICATIVO VAZIO AOS ESTADOS SEM TRANSIÇÕES
+    for estado in automato.values():
+        # Apresenta as transicoes (a,b,c..) do estado -> estado.transicoes.keys()
+        # Percorre cada letra do alfabeto (transição)
+        for transicao in alphabet:
+            # Verifica se a transicao está presente no estado
+            # Senão, adiciona o estado vazio
+            if not (transicao in estado.transicoes.keys()):
+                estado.insere_transicao(transicao, '∅')
+
+    """
+    • Linhas após as transições: Informar o número de palavras a serem testadas. Considere no
+    máximo 10.
+    """
+    # NÚMERO DE PALAVRAS A SEREM TESTADAS
+    index_num_palavras = 4 + num_transicoes
+    num_palavras = int(lines_file[index_num_palavras])  # Linha do arquivo
+
+    # Validando o número de palavras
+    if not (0 <= num_palavras <= 10):
+        print("Número de palavras inválido ou excedido")
+        return 0
+
+    """
+    • Linha(s) seguinte(s): Palavras de entrada, uma por linha. Considere o tamanho máximo das
+    palavras como 15 elementos do alfabeto
+    """
+    # PALAVRAS DE ENTRADA
+    # Lista de palavras a serem testadas
+    palavras = word_input(num_palavras, index_num_palavras, lines_file, alphabet)
+
+    """
+    • Testando as palavras de entrada: 
+    """
+    # Lista para armazenar os resultados dos testes das palavras
+    resultados = []
+
+    for palavra in palavras:
+        # Separa cada letra de uma palavra ( Ex: ['a', 'b', 'b', 'b', 'b', 'a'] )
+        palavra = list(palavra)
+        print(palavra)
+
+        # Valida se a palavra é aceita ou rejeitada pelo automato
+        if check_palavra(automato, palavra):
+            resultados.append('Aceita.')
+            print(f"Palavra {palavra} -> Aceita.\n\n")
+        else:
+            resultados.append('Rejeita.')
+            print(f"Palavra {palavra} -> Rejeita.\n\n")
+
+    """
+    • Arquivo de saída -> Registrando os resultados 
+    """
+    
+
+
+    """
+    #####################################################
+    ############### PARTE 02 ############################
+    #####################################################
+    """
+
     for i in automato.values():
         print(i.__dict__)
-    return 0
 
-    # """
-    # • Linhas após as transições: Informar o número de palavras a serem testadas. Considere no
-    # máximo 10.
-    #
-    # • Linha(s) seguinte(s): Palavras de entrada, uma por linha. Considere o tamanho máximo das
-    # palavras como 15 elementos do alfabeto
-    # """
+
+    print(resultados)
+    return 0
 
 
 # Executando a função principal

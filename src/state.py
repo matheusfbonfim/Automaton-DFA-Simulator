@@ -8,6 +8,8 @@ CLASS STATE
 
     # Classe apresenta métodos getters e setters para manipulações dos atributos descritos
 """
+
+
 class state:
 
     # Método construtor
@@ -15,7 +17,7 @@ class state:
         self.__name = name  # Nome dos estados - 0 a 9
         self.__initial = initial  # Indica se o estado é inicial
         self.__end = end  # Indica se o estado é final
-        self.__transicoes = {} # Transições
+        self.__transicoes = {}  # Transições
 
     # GETTERS
     @property
@@ -48,5 +50,5 @@ class state:
         self.__end = is_end
 
     # MÉTODOS PÚBLICOS
-    def add_transicao(self,aresta, prox_estado):
+    def insere_transicao(self, aresta, prox_estado):
         self.__transicoes[aresta] = prox_estado
