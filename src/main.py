@@ -16,7 +16,7 @@ def main():
 
     # Entrada com o nome do arquivo
     input_file_name = input("Digite o nome do arquivo de entrada (sem a extensão .txt): ")
-    input_file_name = f"./testes/{input_file_name}.txt"
+    input_file_name = f"{input_file_name}.txt"
 
     # Abertura e leitura do arquivo
     lines_file = read_file(input_file_name)  # Lista com cada elemento sendo uma linha do .txt
@@ -207,7 +207,7 @@ def main():
     # output_file_name = f"arquivo_saida/{output_file_name}.txt"
 
     # Escrevendo os resultados em arquivo
-    output_file('arquivo_saida/arquivo_saida.txt', resultados)
+    output_file('arquivo_saida.txt', resultados)
 
     """
     #####################################################
