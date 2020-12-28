@@ -1,8 +1,10 @@
 # IMPORTS
 from state import state  # Importando a class state - objeto estado
-from open_file import open_file  # Importando função para abertura e leitura de arquivo
-from word_input import word_input  # Importando função para inserir as palavras de entrada a serem testadas
-from check_word import check_palavra # Importando função que valida a palavra de entrada no AFD
+from open_file import read_file  # Importando função para abertura e leitura de arquivo
+from output_file import output_file  # Importando função para abertura e escrita do arquivo
+from word_input import word_input  # Importando função que retorna uma lista com as palavras de entrada a serem testadas
+from check_word import check_palavra  # Importando função que valida a palavra de entrada no AFD
+
 
 # FUNÇÃO PRINCIPAL
 def main():
@@ -13,11 +15,11 @@ def main():
     """
 
     # Entrada com o nome do arquivo
-    file_name = input("Digite o nome do arquivo de entrada (sem a extensão .txt): ")
-    file_name = f"{file_name}.txt"
+    input_file_name = input("Digite o nome do arquivo de entrada (sem a extensão .txt): ")
+    input_file_name = f"./testes/{input_file_name}.txt"
 
     # Abertura e leitura do arquivo
-    lines_file = open_file(file_name)  # Lista com cada elemento sendo uma linha do .txt
+    lines_file = read_file(input_file_name)  # Lista com cada elemento sendo uma linha do .txt
 
     # Automato
     automato = {}  # Dicionario de estados
@@ -200,8 +202,12 @@ def main():
     """
     • Arquivo de saída -> Registrando os resultados 
     """
-    
+    # Nome do arquivo de saída
+    # output_file_name = input("Digite o nome do arquivo de saída (sem a extensão .txt): ")
+    # output_file_name = f"arquivo_saida/{output_file_name}.txt"
 
+    # Escrevendo os resultados em arquivo
+    output_file('arquivo_saida/arquivo_saida.txt', resultados)
 
     """
     #####################################################
@@ -211,7 +217,6 @@ def main():
 
     for i in automato.values():
         print(i.__dict__)
-
 
     print(resultados)
     return 0

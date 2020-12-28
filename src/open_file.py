@@ -1,5 +1,5 @@
 """
-FUNÇÃO OPEN_FILE
+FUNÇÃO READ_FILE
     # Função para abertura e leitura do arquivo
     # Abertura de arquivo
         - Modo de leitura padrão r -> read
@@ -10,7 +10,7 @@ FUNÇÃO OPEN_FILE
 """
 
 
-def open_file(file_name):
+def read_file(file_name):
     # O bloco with - Forma flexível de manipular arquivos (abertura e fechamento automático)
     with open(file_name) as file:
         lines_file = file.readlines()  # Lista com as linhas do arquivo
