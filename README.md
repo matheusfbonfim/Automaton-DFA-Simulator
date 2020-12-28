@@ -1,7 +1,7 @@
-<img alt="GoStack" src=".github/automato.png"/>
+<img alt="automato" src=".github/automato.png" width="50%"/>
 
 <h2 align="center">
-  Simulador de um AFD e geração de AF mínimo - Bootcamp GoStack 11 🚀
+  Simulador de um AFD e geração de AF mínimo 🚀
 </h2>
 
 <!-- Tópicos -->
