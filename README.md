@@ -17,7 +17,7 @@
 
 - O simulador deve seguir o formatos de entrada e saída.
 
-## Índice das aulas
+## Partes do projeto
 
 - ### Parte 1 
 
