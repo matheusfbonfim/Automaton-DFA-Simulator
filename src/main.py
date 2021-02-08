@@ -214,7 +214,6 @@ def main():
     ############### PARTE 02 ############################
     #####################################################
     """
-
     for i in automato.values():
         print(i.__dict__)
 
@@ -223,4 +222,5 @@ def main():
 
 
 # Executando a função principal
-main()
+if (__name__ == '__main__'):
+    main()
