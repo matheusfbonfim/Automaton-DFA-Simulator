@@ -21,8 +21,8 @@
 
 - ### Parte 1 
 
-- ### Parte 2
-
+- ### Parte 2 
+-  ‍🔧 Em fase de construção
 
 ## :memo: License
 
@@ -32,5 +32,5 @@ Gostou? Deixe uma estrelinha para ajudar ⭐
 
 <!-- Mensagem final -->
 <h3 align="center">
-Feito com ❤️ por <a href="https://www.linkedin.com/in/matheus-de-farias-bonfim-448667169/">Matheus Bonfim</a>
+Feito com ❤️ por <a href="https://www.linkedin.com/in/matheusfbonfim/">Matheus Bonfim</a>
 </h3>
