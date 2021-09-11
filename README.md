@@ -24,13 +24,28 @@
 - ### Parte 2 
 -  ‍🔧 Em fase de construção
 
+## 🚀 Como executar o projeto
+
+   ```
+   - Clone this repository:
+   $ git clone https://github.com/matheusfbonfim/dfa-simulator
+   
+   - Enter in directory:
+   $ cd src
+   
+   - Execute application:
+   $ python3 main.py
+   ```
+
 ## :memo: License
 
 O projeto está sobre a licença [MIT](./LICENSE) ❤️ 
 
-Gostou? Deixe uma estrelinha para ajudar ⭐
+Gostou? Deixe uma estrelinha para ajudar o projeto ⭐
 
 <!-- Mensagem final -->
 <h3 align="center">
 Feito com ❤️ por <a href="https://www.linkedin.com/in/matheusfbonfim/">Matheus Bonfim</a>
+<br><br>
+</h3>
 </h3>
